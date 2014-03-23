@@ -34,9 +34,21 @@ public class FileManager {
 
     public String getInput() {
         if (input == null){
-            input = input("Enter name of drive to format");
+            input = input();
         }
-        return null;
+        return input;
+    }
+
+    private String input() {
+        if (br == null){
+            br = new BufferedReader(new InputStreamReader(System.in));
+        }
+        try {
+            return br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     public String input(String prompt) {

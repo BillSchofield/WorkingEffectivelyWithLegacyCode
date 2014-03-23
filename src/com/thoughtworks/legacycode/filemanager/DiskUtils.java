@@ -42,4 +42,8 @@ public class DiskUtils {
         // Looks for partition on disk and returns true if it exists
         return false;
     }
+    public boolean canFindFile(String n) {
+        // Looks for file on disk and returns true if it exists
+        return false;
+    }
 }
