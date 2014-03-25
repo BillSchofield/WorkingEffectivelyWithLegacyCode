@@ -1,7 +1,12 @@
 WorkingEffectivelyWithLegacyCode
 ================================
 
-Why do we change software?
+# Legacy Code
+
+## The Legacy Code Dilemma
+When we change code, we should have tests in place. To put tests in place, we often have to change code.
+
+## Why do we change software?
 1. Add a feature - Add some behavior, hold existing behavior constant
 1. Fix a bug - Change some behavior, hold other behavior constant
 1. Improve design - Change code structure, hold existing behavior constant
@@ -11,7 +16,7 @@ Detecting changes in existing behavior is important
 
 
 
-The Legacy Code Change Algorithm
+## The Legacy Code Change Algorithm
 1. Identify Change Points
 1. Find Test Points
 1. Break Dependencies
