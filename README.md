@@ -2,6 +2,7 @@ WorkingEffectivelyWithLegacyCode
 ================================
 
 # Legacy Code
+Legacy code is code without tests.
 
 ## The Legacy Code Dilemma
 When we change code, we should have tests in place. To put tests in place, we often have to change code.
@@ -12,9 +13,7 @@ When we change code, we should have tests in place. To put tests in place, we of
 1. Improve design - Change code structure, hold existing behavior constant
 1. Optimize resource usage - Change code to improve resource usage, hold existing behavior constant
 
-Detecting changes in existing behavior is important
-
-
+Detecting changes in existing behavior is important!
 
 ## The Legacy Code Change Algorithm
 1. Identify Change Points
@@ -22,8 +21,6 @@ Detecting changes in existing behavior is important
 1. Break Dependencies
 1. Write Tests
 1. Make Changes and Refactor
-
-
 
 
 # Breaking Dependencies
@@ -42,6 +39,32 @@ We break dependencies:
  * avoid using real resources
  * helps write maintainable tests
 
+## Practices
+### Seams
+A seam is a place where you can alter behavior in your program without editing in that place.
+
+#### Introducing a Seam
+Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
+
+#### Techniques
+ * Spawn Method
+ * Spawn Class
+ * Wrap Method
+ * Wrap Class aka Decorator
+ * Adapt Parameter
+ * Break out Method Object
+ * Encapsulate Global Reference
+ * Introduce Instance Delegator
+ * Expose Static Method
+ * Introduce Static Setter (Danger!)
+
+
+####  Inheritance Techniques (Use Dynamic Mocks instead of these)
+ * Extract and Override Call (**Danger!**)
+ * Extract and Override Factory Method (**Danger!**)
+ * Extract and Override Getter (**Danger!**)
+ * Extract Implementer (**Danger!**)
+ * Extract Interface (**Danger!**)
 
 Dependency Inversion p.84
 Command/Query Separation p.147
@@ -67,10 +90,4 @@ Monster Methods p.289
 * Introduce seams at the change and interception points using less safe refactorings (if needed)
 * TDD change
 
-Seam
-Introducing a Seam
-Validate that the file to be printed actually exists and throw a Runtime exception that you create if it doesn’t.
-Spawn Method
-Spawn Class
-Wrap Method
-Wrap Class/Decorator
+
