@@ -69,22 +69,38 @@ A seam is a place where you can alter behavior in your program without editing i
 Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
 
 #### Techniques
- * Extract parameter - Not in the book
- * Spawn Method - Introduce a method and TDD that
- * Spawn Class - Introduce a class and TDD that
- * Wrap Method - Introduce a method that contains an existing method and a call to you new method
- * Wrap Class aka Decorator - Wrap your hard to test class with a Decorator and TDD the decorator
- * Adapt Parameter - Use adapter pattern on tough dependency
- * Break out Method Object - Extract method you want to change into a new class and test that
- * Encapsulate Global Reference - Introduce new class that holds your global which it exposes with a getter
- * Introduce Instance Delegator - Introduce a new class that contains related global methods
- * Expose Static Method - Change existing method to be static (if it can be). You can test without an instance
- * Introduce Static Setter - Add a setInstance to your existing Singleton (**Danger!**)
- * Extract and Override Call - Extract tough dependency and override it then test child class (**Danger!**)
- * Extract and Override Factory Method - Move constructor dependency to a method and override it (**Danger!**)
- * Extract and Override Getter - C++ dealie (**Danger!**)
- * Extract Implementer - Don't need it (**Danger!**)
- * Extract Interface - Don't need it (**Danger!**)
+##### Extract parameter
+ * Not in the book
+##### Spawn Method
+ * Introduce a method and TDD that
+##### Spawn Class 
+ * Introduce a class and TDD that
+##### Wrap Method 
+ * Introduce a method that contains an existing method and a call to you new method
+##### Wrap Class aka Decorator 
+ * Wrap your hard to test class with a Decorator and TDD the decorator
+##### Adapt Parameter
+ * Use adapter pattern on tough dependency
+##### Break out Method Object
+ * Extract method you want to change into a new class and test that
+##### Encapsulate Global Reference
+ * Introduce new class that holds your global which it exposes with a getter
+##### Introduce Instance Delegator
+ * Introduce a new class that contains related global methods
+##### Expose Static Method
+ * Change existing method to be static (if it can be). You can test without an instance
+##### Introduce Static Setter
+ * Add a setInstance to your existing Singleton (**Danger!**)
+##### Extract and Override Call
+ * Extract tough dependency and override it then test child class (**Danger!**)
+##### Extract and Override Factory Method
+ * Move constructor dependency to a method and override it (**Danger!**)
+##### Extract and Override Getter
+ * C++ dealie (**Danger!**)
+##### Extract Implementer
+ * Don't need it (**Danger!**)
+##### Extract Interface
+ * Don't need it (**Danger!**)
 
 ### Supporting Concepts
 
