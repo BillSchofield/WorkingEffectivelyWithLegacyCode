@@ -69,43 +69,39 @@ A seam is a place where you can alter behavior in your program without editing i
 Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
 
 #### Techniques
- * Spawn Method
- * Spawn Class
- * Wrap Method
- * Wrap Class aka Decorator
- * Adapt Parameter
- * Break out Method Object
- * Encapsulate Global Reference
- * Introduce Instance Delegator
- * Expose Static Method
- * Introduce Static Setter (**Danger!**)
+ * Extract parameter - Not in the book
+ * Spawn Method - Introduce a method and TDD that
+ * Spawn Class - Introduce a class and TDD that
+ * Wrap Method - Introduce a method that contains an existing method and a call to you new method
+ * Wrap Class aka Decorator - Wrap your hard to test class with a Decorator and TDD the decorator
+ * Adapt Parameter - Use adapter pattern on tough dependency
+ * Break out Method Object - Extract method you want to change into a new class and test that
+ * Encapsulate Global Reference - Introduce new class that holds your global which it exposes with a getter
+ * Introduce Instance Delegator - Introduce a new class that contains related global methods
+ * Expose Static Method - Change existing method to be static (if it can be). You can test without an instance
+ * Introduce Static Setter - Add a setInstance to your existing Singleton (**Danger!**)
+ * Extract and Override Call - Extract tough dependency and override it then test child class (**Danger!**)
+ * Extract and Override Factory Method - Move constructor dependency to a method and override it (**Danger!**)
+ * Extract and Override Getter - C++ dealie (**Danger!**)
+ * Extract Implementer - Don't need it (**Danger!**)
+ * Extract Interface - Don't need it (**Danger!**)
 
+### Supporting Concepts
 
-####  Inheritance Techniques
- * Extract and Override Call (**Danger!**)
- * Extract and Override Factory Method (**Danger!**)
- * Extract and Override Getter (**Danger!**)
- * Extract Implementer (**Danger!**)
- * Extract Interface (**Danger!**)
-
-### Supporting Techniques
-
-#### Scratch Refactoring (p.212)
+#### Scratch Refactoring
 * Refactor the code to understand it better, *then throw it away*.
 * Use only automated refactorings, *then check it in*. <- Bill's version
 
-#### Removing Duplication (p.275)
+#### Removing Duplication
 * Use automated refactorings to make different code blocks identical
 * Extract method or variable (IDE does the rest)
+* Do example
 
-#### Monster Methods (p.289)
+#### Monster Methods
 * Bulleted Method - indentation is not the most obvious problem
 * Snarled Method - indentation makes you dizzy
 
-
-Dependency Inversion p.84
-Command/Query Separation p.147
-Feature sketches p.252
-* Add sample code
+#### Command/Query Separation
+* Modify state or report state. Getters should be idempotent
 
 
