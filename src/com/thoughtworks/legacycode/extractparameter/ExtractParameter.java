@@ -10,6 +10,10 @@ public class ExtractParameter {
     private Zoo zoo;
     private List<Enclosure> enclosures;
 
+    public Zoo getZoo() {
+        return zoo;
+    }
+
     public ExtractParameter() {
         zoo = new Zoo();
     }
