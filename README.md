@@ -69,7 +69,7 @@ A seam is a place where you can alter behavior in your program without editing i
 Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
 
 ### Techniques for Breaking Dependencies
-#### Extract parameter
+#### Inject Dependency
  * Not in the book. You'll love this one.
 
 #### Spawn Method
