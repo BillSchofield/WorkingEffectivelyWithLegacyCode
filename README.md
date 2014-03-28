@@ -70,7 +70,7 @@ Validate that the file to be printed actually exists and throw a Runtime excepti
 
 ### Techniques for Breaking Dependencies
 #### Extract parameter
- * Not in the book
+ * Not in the book. You'll love this one.
 
 #### Spawn Method
  * Introduce a method and TDD that
@@ -107,15 +107,6 @@ Validate that the file to be printed actually exists and throw a Runtime excepti
 
 #### Extract and Override Factory Method
  * Move constructor dependency to a method and override it (**Danger!**)
-
-#### Extract and Override Getter
- * C++ dealie (**Danger!**)
-
-#### Extract Implementer
- * Don't need it (**Danger!**)
-
-#### Extract Interface
- * Don't need it (**Danger!**)
 
 ### Supporting Concepts
 
