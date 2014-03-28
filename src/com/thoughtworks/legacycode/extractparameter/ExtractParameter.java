@@ -10,8 +10,8 @@ public class ExtractParameter {
     private Zoo zoo;
     private List<Enclosure> enclosures;
 
-    public Zoo getZoo() {
-        return zoo;
+    public static void main(String[] args) {
+        new ExtractParameter().moveWildAnimalsToEnclosures();
     }
 
     public ExtractParameter() {
@@ -37,6 +37,10 @@ public class ExtractParameter {
             findEnclosureFor(animal).add(animal);
         }
         Animals.wild().clear();
+    }
+
+    public Zoo getZoo() {
+        return zoo;
     }
 
     private Enclosure findEnclosureFor(Animal animal) {
