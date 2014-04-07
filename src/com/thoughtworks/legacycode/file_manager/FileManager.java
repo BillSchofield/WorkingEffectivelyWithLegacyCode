@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by ThoughtWorker on 3/23/14.
- */
 public class FileManager {
     private static Defragger df;
     private String input = null;

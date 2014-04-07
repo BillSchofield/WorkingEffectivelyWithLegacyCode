@@ -2,9 +2,6 @@ package com.thoughtworks.legacycode.file_manager;
 
 import java.io.File;
 
-/**
- * Created by ThoughtWorker on 3/23/14.
- */
 public class FilePrinter {
     public FilePrinter(File file) {
 
