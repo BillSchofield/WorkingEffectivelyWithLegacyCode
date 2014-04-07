@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.filemanager;
+package com.thoughtworks.legacycode.file_manager;
 
 import java.io.File;
 

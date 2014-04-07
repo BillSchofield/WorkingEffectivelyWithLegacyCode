@@ -1,6 +1,4 @@
-package com.thoughtworks.legacycode.filemanager;
-
-import com.sun.corba.se.spi.ior.iiop.RequestPartitioningComponent;
+package com.thoughtworks.legacycode.file_manager;
 
 import java.io.File;
 

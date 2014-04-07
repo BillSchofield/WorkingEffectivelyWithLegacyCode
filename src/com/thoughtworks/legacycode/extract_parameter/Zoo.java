@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.extractparameter;
+package com.thoughtworks.legacycode.extract_parameter;
 
 /**
  * Created by ThoughtWorker on 3/25/14.

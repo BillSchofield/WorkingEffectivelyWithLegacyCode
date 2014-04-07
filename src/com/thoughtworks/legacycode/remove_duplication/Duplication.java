@@ -1,8 +1,7 @@
-package com.thoughtworks.legacycode.duplication;
+package com.thoughtworks.legacycode.remove_duplication;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Duplication {
     public static void main(String[] args) {

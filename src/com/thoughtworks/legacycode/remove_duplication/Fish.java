@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.duplication;
+package com.thoughtworks.legacycode.remove_duplication;
 
 /**
  * Created by ThoughtWorker on 3/24/14.

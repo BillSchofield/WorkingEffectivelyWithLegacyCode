@@ -1,6 +1,6 @@
-package com.thoughtworks.legacycode.extractparameter;
+package com.thoughtworks.legacycode.extract_parameter;
 
-import com.thoughtworks.legacycode.duplication.Animal;
+import com.thoughtworks.legacycode.remove_duplication.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
