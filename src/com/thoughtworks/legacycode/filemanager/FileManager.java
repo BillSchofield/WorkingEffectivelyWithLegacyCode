@@ -64,8 +64,7 @@ public class FileManager {
         return "";
     }
 
-    public static void init(String... p) {
-        df = new Defragger(p);
-
+    public static void init(String[] partitions) {
+        df = new Defragger(partitions);
     }
 }
