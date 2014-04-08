@@ -31,11 +31,8 @@ When we change code, we should have tests in place. To put tests in place, we of
 1. Lean on the Compiler
 1. Pair Programming
 
-#### Process
-* Automated Refactoring to introduce basic seams and break dependencies
-* Cover with Characterization Tests and Regular Unit Tests
-* Introduce seams at the change and interception points using less safe refactorings (if needed)
-* TDD change
+#### Seams
+A seam is a place where you can alter behavior in your program without editing in that place.
 
 ##### Characterization Tests
 * *Characterizes* the actual behavior of the code.
@@ -44,6 +41,12 @@ When we change code, we should have tests in place. To put tests in place, we of
 
 ##### Interception Points
 * An interception point is simply a point in your program where you can detect the effects of a particular change. Make this as close to your change points as you can.
+
+#### Process
+* Automated Refactoring to introduce basic seams and break dependencies
+* Cover with Characterization Tests and Regular Unit Tests
+* Introduce seams at the change and interception points using less safe refactorings (if needed)
+* TDD change
 
 ## Breaking Dependencies
 ### Sensing & Separation
@@ -64,18 +67,16 @@ We break dependencies:
 ## Principles
 #### In order to make code better, we sometimes need to make some aspect of it worse.
 Testable & Clear > **Testable & Muddy** > **Untestable & Clear** > Untestable & Muddy
+
+**_When you break dependencies in legacy code, you often have to suspend your sense of aesthetics a bit. Some dependencies break cleanly; others end up looking less than ideal from a design point of view. They are like the incision point in surgery: There might be a scar left in your code after your work, but everything beneath it can get better.
+If later you can cover the code around the point where you broke the dependencies, you can heal the scar too._**
+
 #### We have to carefully balance these priorities
 * New features
 * Design Improvements
 * Tests
 
 ## Practices
-### Seams
-A seam is a place where you can alter behavior in your program without editing in that place.
-
-#### Introducing a Seam
-Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
-
 ### Techniques for Breaking Dependencies
 #### Parameterize Constructor
  * Inject a dependency instead of leaving it internal to a class
