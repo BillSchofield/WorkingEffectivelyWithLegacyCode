@@ -37,12 +37,12 @@ When we change code, we should have tests in place. To put tests in place, we of
 * Introduce seams at the change and interception points using less safe refactorings (if needed)
 * TDD change
 
-##### Characterization Tests (p.186)
+##### Characterization Tests
 * *Characterizes* the actual behavior of the code.
 * Use white box testing to identify useful input values
 * Assert on the current actual results
 
-##### Interception Points (p.174)
+##### Interception Points
 * An interception point is simply a point in your program where you can detect the effects of a particular change. Make this as close to your change points as you can.
 
 ## Breaking Dependencies

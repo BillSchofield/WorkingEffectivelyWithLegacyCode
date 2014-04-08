@@ -1,8 +1,5 @@
 package com.thoughtworks.legacycode.extract_and_override_call;
 
-/**
- * Created by ThoughtWorker on 4/7/14.
- */
 public class Book {
     private boolean overDue=false;
     private String name;
