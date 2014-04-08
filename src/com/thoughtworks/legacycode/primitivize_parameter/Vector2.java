@@ -17,4 +17,12 @@ public class Vector2 {
     private double average(double number1, double number2) {
         return (number1 + number2)/2;
     }
+
+    public Vector2 minus(Vector2 that) {
+        return null;
+    }
+
+    public Vector2 add(Vector2 that) {
+        return null;
+    }
 }
