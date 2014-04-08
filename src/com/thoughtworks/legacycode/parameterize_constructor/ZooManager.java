@@ -1,20 +1,15 @@
-package com.thoughtworks.legacycode.extract_parameter;
+package com.thoughtworks.legacycode.parameterize_constructor;
 
 import com.thoughtworks.legacycode.remove_duplication.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExtractParameter {
-
+public class ZooManager {
     private Zoo zoo;
     private List<Enclosure> enclosures;
 
-    public static void main(String[] args) {
-        new ExtractParameter().moveWildAnimalsToEnclosures();
-    }
-
-    public ExtractParameter() {
+    public ZooManager() {
         zoo = new Zoo();
     }
 

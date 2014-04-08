@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.extract_parameter;
+package com.thoughtworks.legacycode.parameterize_constructor;
 
 import com.thoughtworks.legacycode.remove_duplication.Animal;
 

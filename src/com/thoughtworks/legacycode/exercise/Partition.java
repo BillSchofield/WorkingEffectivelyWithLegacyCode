@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.file_manager;
+package com.thoughtworks.legacycode.exercise;
 
 public class Partition {
     public Partition(String n) throws PartitionDoesNotExistException {

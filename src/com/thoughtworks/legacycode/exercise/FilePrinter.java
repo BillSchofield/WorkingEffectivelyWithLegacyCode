@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.file_manager;
+package com.thoughtworks.legacycode.exercise;
 
 import java.io.File;
 
