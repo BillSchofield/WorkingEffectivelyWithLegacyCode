@@ -62,9 +62,12 @@ We break dependencies:
  * helps write maintainable tests
 
 ## Principles
-### In order to make code better, we sometimes need to make some aspect of it worse.
-
+#### In order to make code better, we sometimes need to make some aspect of it worse.
 Testable & Clear > **Testable & Muddy** > **Untestable & Clear** > Untestable & Muddy
+#### We have to carefully balance these priorities
+* New features
+* Design Improvements
+* Tests
 
 ## Practices
 ### Seams
