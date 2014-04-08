@@ -77,14 +77,38 @@ A seam is a place where you can alter behavior in your program without editing i
 Validate that the file to be printed actually exists and throw a Runtime exception if it does not.
 
 ### Techniques for Breaking Dependencies
-#### Inject Dependency
- * Not in the book. You'll love this one.
+#### Parameterize Constructor
+ * Inject a dependency instead of leaving it internal to a class
+
+#### Parameterize Method
+ * Inject a dependency instead of leaving it internal to a method
 
 #### Spawn Method
  * Introduce a method and TDD that
 
 #### Spawn Class
  * Introduce a class and TDD that
+
+#### Break out Method Object
+ * Extract method you want to change into a new class and test that
+
+#### Subclass and Override Method
+ * Test a subclass of your real class and override methods with dependencies
+
+#### Extract and Override Call
+ * Extract tough dependency and override it then test child class (**Danger!**)
+
+#### Extract and Override Factory Method
+ * Move constructor dependency to a method and override it (**Danger!**)
+
+#### Pull up Feature
+ * Pull the parts of a class you want to test into a new abstract base class then test a child of that
+
+#### Push down Dependencies
+ * Make current class abstract and push your dependencies into a child class. Test through a test child class.
+
+#### Expose Static Method
+ * Change existing method to be static (if it can be). You can test without an instance
 
 #### Wrap Method
  * Introduce a method that contains an existing method and a call to you new method
@@ -95,26 +119,17 @@ Validate that the file to be printed actually exists and throw a Runtime excepti
 #### Adapt Parameter
  * Use adapter pattern on tough dependency
 
-#### Break out Method Object
- * Extract method you want to change into a new class and test that
-
 #### Encapsulate Global Reference
  * Introduce new class that holds your global which it exposes with a getter
 
 #### Introduce Instance Delegator
  * Introduce a new class that contains related global methods
 
-#### Expose Static Method
- * Change existing method to be static (if it can be). You can test without an instance
+#### Primitivize Parameter
+ * Pass the values from an object instead of the object
 
 #### Introduce Static Setter
  * Add a setInstance to your existing Singleton (**Danger!**)
-
-#### Extract and Override Call
- * Extract tough dependency and override it then test child class (**Danger!**)
-
-#### Extract and Override Factory Method
- * Move constructor dependency to a method and override it (**Danger!**)
 
 ### Supporting Concepts
 
