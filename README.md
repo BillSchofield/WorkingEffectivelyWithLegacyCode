@@ -61,6 +61,19 @@ We break dependencies:
  * avoid using real resources
  * helps write maintainable tests
 
+## Principles
+### In order to make code better, we sometimes need to make some aspect of it worse.
+
+Tested & Testable & Clear >
+
+Tested & Testable & Muddy >
+
+**Untested & Testable & Muddy** >
+
+**Untested & Untestable & Clear** >
+
+Untested & Untestable & Muddy
+
 ## Practices
 ### Seams
 A seam is a place where you can alter behavior in your program without editing in that place.
