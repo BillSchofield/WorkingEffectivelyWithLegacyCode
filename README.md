@@ -64,7 +64,7 @@ We break dependencies:
 ## Principles
 ### In order to make code better, we sometimes need to make some aspect of it worse.
 
-Tested & Testable & Clear > **Untested & Testable & Muddy** > **Untested & Untestable & Clear** > Untested & Untestable & Muddy
+Testable & Clear > **Testable & Muddy** > **Untestable & Clear** > Untestable & Muddy
 
 ## Practices
 ### Seams
