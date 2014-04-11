@@ -126,13 +126,13 @@ incision point in surgery: There might be a scar left in your code after your wo
 #### Encapsulate Global Reference
  * Introduce new class that holds your global which it exposes with a getter
 
-#### Introduce Instance Delegator
+#### Introduce Instance Delegator (No example yet)
  * Introduce a new class that contains related global methods
 
 #### Primitivize Parameter
  * Pass the values from an object instead of the object
 
-#### Introduce Static Setter
+#### Introduce Static Setter (No example yet)
  * Add a setInstance to your existing Singleton (**Danger!**)
 
 ### Supporting Concepts
