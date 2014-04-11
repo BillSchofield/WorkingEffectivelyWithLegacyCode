@@ -100,10 +100,10 @@ _If later you can cover the code around the point where you broke the dependenci
  * Test a subclass of your real class and override methods with dependencies
 
 #### Extract and Override Call
- * Extract tough dependency and override it then test child class (**Danger!**)
+ * Extract tough dependency and override it then test child class
 
-#### Extract and Override Factory Method
- * Move constructor dependency to a method and override it (**Danger!**)
+#### Extract and Override Factory Method (No example yet)
+ * Move constructor dependency to a method and override it
 
 #### Pull up Feature
  * Pull the parts of a class you want to test into a new abstract base class then test a child of that
