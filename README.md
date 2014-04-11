@@ -72,7 +72,7 @@ _When you break dependencies in legacy code, you often have to suspend your sens
 dependencies break cleanly; others end up looking less than ideal from a design point of view. They are like the
 incision point in surgery: There might be a scar left in your code after your work, but everything beneath it can get better._
 
-**_If later you can cover the code around the point where you broke the dependencies, you can heal the scar too._**
+_If later you can cover the code around the point where you broke the dependencies, you can heal the scar too._
 
 #### We have to carefully balance these priorities
 * New features
