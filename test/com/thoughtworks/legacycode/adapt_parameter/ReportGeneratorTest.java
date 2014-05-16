@@ -4,8 +4,19 @@ import org.junit.Test;
 
 public class ReportGeneratorTest {
 
-    @Test
-    public void shouldDoSomething() {
+//  Adapt Parameter
 
+//  Use adapter pattern on tough dependency
+//
+// Wrap the console parameter in a new class that we can then mock
+
+    @Test
+    public void shouldPrintConsoleInputSomething() {
+        ReportGenerator reportGenerator = new ReportGenerator();
+
+        // Change
+        reportGenerator.reportToConsole(System.console());
+
+        // Verify that we printed the string that the user entered into the console
     }
 }

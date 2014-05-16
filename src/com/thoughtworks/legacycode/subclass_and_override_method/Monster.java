@@ -4,8 +4,8 @@ import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
 
 public class Monster {
 
-    private Physics physics = Physics.getInstance();
-    private Rendering rendering = new Rendering();
+    private Physics physics;
+    private Rendering rendering;
     private Integer hitPoints;
     private String state;
     private Vector2 position;
@@ -13,12 +13,14 @@ public class Monster {
     // many more instance variables
 
 
-    public Monster(Integer hitPoints, String state, Vector2 position) {
+    public Monster(Physics physics, Rendering rendering, Integer hitPoints, String state, Vector2 position) {
+        this.physics = physics;
+        this.rendering = rendering;
         this.hitPoints = hitPoints;
         this.state = state;
         this.position = position;
-        physics.add(this);
-        rendering.render(this);
+        this.physics.add(this);
+        this.rendering.render(this);
     }
 
     public void processAi(){
@@ -35,6 +37,8 @@ public class Monster {
         }
     }
 
+    // Override this method in new subclass because Physics is scary
+    // We can also stub this to return the enemy that we will use for our assertion
     public Monster findNearestEnemy() {
         return physics.findNearestEntityTo(position);
     }
@@ -63,6 +67,7 @@ public class Monster {
         rendering.render(this);
     }
 
+    // Override this method in new subclass because Physics is scary
     public void moveTo(Vector2 position){
         this.position = position;
         physics.move(this, position);

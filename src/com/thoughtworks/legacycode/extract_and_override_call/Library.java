@@ -11,10 +11,13 @@ public class Library {
     }
 
     public void printBooks(List<Book> books) {
+
+        // Extract this line into a protected method and override it in an new subclass
         final String libraryName = System.console().readLine();
+
         printStream.println(libraryName);
         for (Book book : books) {
-            printStream.println(book);
+            printStream.println(book.getName());
         }
     }
 }

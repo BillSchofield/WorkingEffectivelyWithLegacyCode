@@ -21,6 +21,7 @@ public class Monster {
         rendering.render(this);
     }
 
+    // Pull this up into an abstract base class. Make all other methods abstract.
     public void processAi(){
         if (hitPoints > 5){
             Monster nearestEnemy = findNearestEnemy();
@@ -35,6 +36,7 @@ public class Monster {
         }
     }
 
+    // Stub this out in new child class so it returns a canned result that you can
     public Monster findNearestEnemy() {
         return physics.findNearestEntityTo(position);
     }

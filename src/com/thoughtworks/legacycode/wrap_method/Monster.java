@@ -3,7 +3,6 @@ package com.thoughtworks.legacycode.wrap_method;
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
 
 public class Monster {
-
     private Integer hitPoints;
     private String state;
     private Vector2 position;
@@ -16,6 +15,7 @@ public class Monster {
         this.position = position;
     }
 
+    // Wrap this in a new method that call the method you want to test. Don't test this new method
     public void processAi(){
         if (hitPoints > 5){
             Monster nearestEnemy = findNearestEnemy();
@@ -56,5 +56,9 @@ public class Monster {
 
     public void moveTo(Vector2 position){
         this.position = position;
+    }
+
+    public String state() {
+        return state;
     }
 }

@@ -4,8 +4,10 @@ import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
 
 public class Monster {
 
+    // Push Physics and Rendering down
     private Physics physics = Physics.getInstance();
     private Rendering rendering = new Rendering();
+
     private Integer hitPoints;
     private String state;
     private Vector2 position;
@@ -17,6 +19,7 @@ public class Monster {
         this.hitPoints = hitPoints;
         this.state = state;
         this.position = position;
+        // Push Physics and Rendering down
         physics.add(this);
         rendering.render(this);
     }
@@ -35,6 +38,7 @@ public class Monster {
         }
     }
 
+    // Push this down
     public Monster findNearestEnemy() {
         return physics.findNearestEntityTo(position);
     }
@@ -59,10 +63,12 @@ public class Monster {
         moveTo(target.position);
     }
 
+    // Push this down
     public void draw(){
         rendering.render(this);
     }
 
+    // Push this down
     public void moveTo(Vector2 position){
         this.position = position;
         physics.move(this, position);

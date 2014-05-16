@@ -2,7 +2,7 @@ package com.thoughtworks.legacycode.wrap_class;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
 
-public class Monster {
+public class Monster implements GameEntity{
 
     private Physics physics = Physics.getInstance();
     private Rendering rendering = new Rendering();
@@ -21,22 +21,24 @@ public class Monster {
         rendering.render(this);
     }
 
+    @Override
     public void processAi(){
         if (hitPoints > 5){
-            Monster nearestEnemy = findNearestEnemy();
+            String nameOfEnemy = System.console().readLine();
+            GameEntity enemy = findEnemyByName(nameOfEnemy);
             if (state.equals("Angry")){
-                moveTo(nearestEnemy);
-                attack(nearestEnemy);
+                moveTo(enemy);
+                attack(enemy);
             } else if (state.equals("Afraid")){
-                moveAwayFrom(nearestEnemy);
+                moveAwayFrom(enemy);
             }
         } else {
             rest();
         }
     }
 
-    public Monster findNearestEnemy() {
-        return physics.findNearestEntityTo(position);
+    private GameEntity findEnemyByName(String nameOfEnemy) {
+        return null;
     }
 
     public void rest() {
@@ -46,25 +48,48 @@ public class Monster {
         }
     }
 
-    public void moveAwayFrom(Monster target) {
-        Vector2 offsetFromMonsterToMe = position.minus(target.position);
+    public void moveAwayFrom(GameEntity target) {
+        Vector2 offsetFromMonsterToMe = position.minus(target.position());
         moveTo(position.add(offsetFromMonsterToMe));
     }
 
-    public void attack(Monster target) {
-        target.hitPoints -= damage;
+    public void attack(GameEntity target) {
+        target.decreaseHitPoints(damage);
     }
 
-    public void moveTo(Monster target) {
-        moveTo(target.position);
+    @Override
+    public void moveTo(GameEntity target) {
+        moveTo(target.position());
     }
 
+    @Override
     public void draw(){
         rendering.render(this);
     }
 
+    @Override
     public void moveTo(Vector2 position){
         this.position = position;
         physics.move(this, position);
+    }
+
+    @Override
+    public Vector2 position() {
+        return position;
+    }
+
+    @Override
+    public void decreaseHitPoints(Integer damage) {
+        hitPoints -= damage;
+    }
+
+    @Override
+    public String state() {
+        return state;
+    }
+
+    @Override
+    public void position(Vector2 position) {
+        this.position = position;
     }
 }
