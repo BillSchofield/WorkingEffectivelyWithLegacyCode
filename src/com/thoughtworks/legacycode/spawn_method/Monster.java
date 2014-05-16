@@ -17,20 +17,22 @@ public class Monster {
     }
 
     public void processAi(){
+        // Call new method here. It should be public so you can test it.
         if (hitPoints > 5){
-            Monster nearestEnemy = findNearestEnemy();
+            String enemyName = System.console().readLine();
+            Monster enemy = findEnemyByName(enemyName);
             if (state.equals("Angry")){
-                moveTo(nearestEnemy);
-                attack(nearestEnemy);
+                moveTo(enemy);
+                attack(enemy);
             } else if (state.equals("Afraid")){
-                moveAwayFrom(nearestEnemy);
+                moveAwayFrom(enemy);
             }
         } else {
             rest();
         }
     }
 
-    public Monster findNearestEnemy() {
+    public Monster findEnemyByName(String enemyName) {
         return null;
     }
 
@@ -56,5 +58,9 @@ public class Monster {
 
     public void moveTo(Vector2 position){
         this.position = position;
+    }
+
+    public String state() {
+        return state;
     }
 }
