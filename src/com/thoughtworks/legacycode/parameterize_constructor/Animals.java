@@ -10,7 +10,7 @@ public class Animals {
 
     public static List<Animal> wild() {
         if (wild == null){
-            wild = new ArrayList<>();
+            wild = new ArrayList<Animal>();
         }
         return wild;
     }

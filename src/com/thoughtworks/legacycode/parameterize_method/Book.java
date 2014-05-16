@@ -12,4 +12,8 @@ public class Book {
     public boolean isOverDue() {
         return overDue;
     }
+
+    public String getName() {
+        return name;
+    }
 }

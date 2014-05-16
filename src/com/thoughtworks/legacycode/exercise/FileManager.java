@@ -13,17 +13,17 @@ public class FileManager {
     public static void run() throws PartitionDoesNotExistException {
         FileManager fm = new FileManager();
         while(!fm.input("Enter disk command").equals("quit")){
-            switch(fm.getInput()){
-                case "format":
-                    DiskUtils.getInstance().format(fm.input("Enter name of drive to format"));
-                    break;
-                case "print":
-                    String fn = fm.input("Enter file name");
-                    File file = DiskUtils.getInstance().getFile(fn);
-                    FilePrinter fp = new FilePrinter(file);
-                    fp.print();
-                    break;
-                case "defrag":
+            String input1 = fm.getInput();
+            if(input1.equals("format")) {
+                DiskUtils.getInstance().format(fm.input("Enter name of drive to format"));
+            }
+            else if(input1.equals("print")) {
+                String fn = fm.input("Enter file name");
+                File file = DiskUtils.getInstance().getFile(fn);
+                FilePrinter fp = new FilePrinter(file);
+                fp.print();
+            }
+            else if (input1.equals("defrag")){
                     DiskUtils.getInstance().useDefragger(fm, df);
             }
         }

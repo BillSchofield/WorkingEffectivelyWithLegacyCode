@@ -18,7 +18,7 @@ public class Library {
         final String libraryName = bufferedReader.readLine();
         printStream.println(libraryName);
         for (Book book : books) {
-            printStream.println(book);
+            printStream.println(book.getName());
         }
     }
 }

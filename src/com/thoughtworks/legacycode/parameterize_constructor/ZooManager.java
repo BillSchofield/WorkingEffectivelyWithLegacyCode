@@ -15,14 +15,14 @@ public class ZooManager {
 
     public int numberOfEnclosures(){
         if (enclosures == null){
-            enclosures = new ArrayList<>();
+            enclosures = new ArrayList<Enclosure>();
         }
         return enclosures.size();
     }
 
     public void addEnclosure(Enclosure enclosure){
         if (enclosures == null){
-            enclosures = new ArrayList<>();
+            enclosures = new ArrayList<Enclosure>();
         }
         enclosures.add(enclosure);
     }
@@ -40,7 +40,7 @@ public class ZooManager {
 
     private Enclosure findEnclosureFor(Animal animal) {
         if (enclosures == null){
-            enclosures = new ArrayList<>();
+            enclosures = new ArrayList<Enclosure>();
         }
         for (Enclosure enclosure : enclosures) {
             if (enclosure.contains(animal)){
