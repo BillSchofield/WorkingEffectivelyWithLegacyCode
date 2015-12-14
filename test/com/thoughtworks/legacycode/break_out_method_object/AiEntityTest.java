@@ -11,7 +11,7 @@ import static org.mockito.Mockito.when;
 //  Extract method you want to change into a new class and test that
 //  There is a hint in the Monster class
 
-public class MonsterTest {
+public class AiEntityTest {
     @Test
     public void shouldBecomeDeadWhenAtZeroOrFewerHitPoints() {
         Monster monster = mock(Monster.class);

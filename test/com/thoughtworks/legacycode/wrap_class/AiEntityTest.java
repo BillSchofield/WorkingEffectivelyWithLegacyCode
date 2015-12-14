@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class MonsterTest {
+public class AiEntityTest {
 //  Wrap Class aka Decorator
 
 //  Wrap your hard to test class with a Decorator and TDD the decorator

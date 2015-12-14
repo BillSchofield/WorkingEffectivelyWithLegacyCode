@@ -1,4 +1,4 @@
-package com.thoughtworks.legacycode.spawn_class;
+package com.thoughtworks.legacycode.spawn_method;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
 import org.junit.Test;
@@ -6,13 +6,12 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-
-//  Spawn Class
+//  Spawn Method
 //
-//  Introduce a new class for the test below and TDD a method on that class. Don't test that the new method is called by processAi
+//  Introduce a method for the test below and TDD that method. Don't test that the new method is called by processAi
 //  There is a hint in the Monster class
 
-public class MonsterTest {
+public class AiEntityTest {
     @Test
     public void shouldBecomeDeadWhenAtZeroOrFewerHitPoints() {
         int hitPoints = 0;

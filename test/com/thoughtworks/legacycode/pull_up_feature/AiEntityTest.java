@@ -2,7 +2,7 @@ package com.thoughtworks.legacycode.pull_up_feature;
 
 import org.junit.Test;
 
-public class MonsterTest {
+public class AiEntityTest {
 
 //  Pull up Feature
 //

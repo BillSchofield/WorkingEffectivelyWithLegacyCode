@@ -7,15 +7,15 @@ public class Physics {
         return null;
     }
 
-    public void add(Monster monster) {
+    public void add(AiEntity aiEntity) {
 
     }
 
-    public Monster findNearestEntityTo(Vector2 position) {
+    public AiEntity findNearestEntityTo(Vector2 position) {
         return null;
     }
 
-    public void move(Monster entity, Vector2 position) {
+    public void move(AiEntity entity, Vector2 position) {
 
     }
 }

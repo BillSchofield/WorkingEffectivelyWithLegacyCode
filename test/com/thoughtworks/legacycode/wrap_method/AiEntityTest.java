@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class MonsterTest {
+public class AiEntityTest {
 //Wrap Method
 //  New method (wraps the existing method and the method that will contain our new behavior) * Don't test
 //  |------- Existing Method (processAi) * Don't test
