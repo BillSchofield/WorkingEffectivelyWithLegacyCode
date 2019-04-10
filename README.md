@@ -2,8 +2,8 @@ WorkingEffectivelyWithLegacyCode
 ================================
 
 # What is Legacy Code?
-Legacy code is code without tests. -- *Michael Feathers*  
-A software system that the current team finds difficult to reason about and maintain. -- *Bill Schofield*  
+Legacy code is code without tests. -*Michael Feathers*  
+A software system that the current team finds difficult to reason about and maintain. -*Bill Schofield*  
 
 # Bill's Advice
 ## How do *you* deal with Legacy Code?
