@@ -16,8 +16,8 @@ dependencies {
 }
 
 pitest {
-    targetClasses = ['com.thoughtworks.tddintro.*']
-    targetTests   = ['com.thoughtworks.tddintro.*']
+    targetClasses = ['legacycode.*']
+    targetTests   = ['legacycode.*']
     useClasspathFile = true
 
     testPlugin = 'junit5'

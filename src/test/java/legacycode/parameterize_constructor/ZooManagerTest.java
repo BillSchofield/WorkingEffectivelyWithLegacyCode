@@ -12,14 +12,14 @@ public class ZooManagerTest {
 
     @Test
     public void shouldPlaceAnimalInTheSameCageAsAlreadyCagedAnimalOfTheSameType() {
-        ZooManager zooManager = new ZooManager();
+        ZooManagerBefore zooManager = new ZooManagerBefore();
         zooManager.moveWildAnimalsToEnclosures();
         // assert or verify that the new animal ended up in the correct enclosure
     }
 
     @Test
     public void shouldPlaceAllWildAnimals() {
-        ZooManager zooManager = new ZooManager();
+        ZooManagerBefore zooManager = new ZooManagerBefore();
         zooManager.moveWildAnimalsToEnclosures();
         // assert or verify that there are no wild animals left
     }

@@ -5,11 +5,12 @@ import legacycode.remove_duplication.Animal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ZooManager {
+public class ZooManagerBefore {
     private Zoo zoo;
     private List<Enclosure> enclosures;
 
-    public ZooManager() {
+
+    public ZooManagerBefore() {
         zoo = new Zoo();
     }
 
