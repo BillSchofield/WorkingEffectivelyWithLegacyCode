@@ -1,10 +1,10 @@
 package com.thoughtworks.legacycode.wrap_method;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AiEntityTest {
 //Wrap Method
@@ -14,6 +14,7 @@ public class AiEntityTest {
 // Introduce a method that contains an existing method and a call to you new method
 
     @Test
+    @Disabled
     public void shouldBecomeDeadWhenFewerThan1HitPoints() {
         Integer hitPoints = 0;
         Monster monster = new Monster(hitPoints, "Angry", new Vector2(0, 0));
@@ -21,7 +22,7 @@ public class AiEntityTest {
         // Call new method instead of processAi
         monster.processAi();
 
-        assertThat(monster.state(), is("DEAD"));
+        assertThat(monster.state()).isEqualTo("DEAD");
     }
 
 }

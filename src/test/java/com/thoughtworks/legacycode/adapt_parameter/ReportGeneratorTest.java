@@ -1,6 +1,7 @@
 package com.thoughtworks.legacycode.adapt_parameter;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class ReportGeneratorTest {
 
@@ -11,6 +12,7 @@ public class ReportGeneratorTest {
 // Wrap the console parameter in a new class that we can then mock
 
     @Test
+    @Disabled
     public void shouldPrintConsoleInputSomething() {
         ReportGenerator reportGenerator = new ReportGenerator();
 

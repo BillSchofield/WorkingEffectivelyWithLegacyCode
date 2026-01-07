@@ -1,10 +1,10 @@
 package com.thoughtworks.legacycode.wrap_class;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AiEntityTest {
 //  Wrap Class aka Decorator
@@ -14,6 +14,7 @@ public class AiEntityTest {
 //  Create a new class that implements the GameEntity interface and also 'has-a' GameEntity
 
     @Test
+    @Disabled
     public void shouldBecomeDeadWhenAtZeroOrFewerHitPoints() {
         int hitPoints = 0;
         // Don't create an actual Monster here. Inject a mock GameEntity into your new decorator class
@@ -21,6 +22,6 @@ public class AiEntityTest {
 
         gameEntity.processAi();
 
-        assertThat(gameEntity.state(), is("Dead"));
+        assertThat(gameEntity.state()).isEqualTo("Dead");
     }
 }

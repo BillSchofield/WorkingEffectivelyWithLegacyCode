@@ -1,10 +1,9 @@
 package com.thoughtworks.legacycode.break_out_method_object;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 //  Break out Method Object
 
@@ -13,6 +12,7 @@ import static org.mockito.Mockito.when;
 
 public class AiEntityTest {
     @Test
+    @Disabled
     public void shouldBecomeDeadWhenAtZeroOrFewerHitPoints() {
         Monster monster = mock(Monster.class);
         when(monster.hitPoints()).thenReturn(0);

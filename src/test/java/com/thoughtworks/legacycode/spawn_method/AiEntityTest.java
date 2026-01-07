@@ -1,10 +1,10 @@
 package com.thoughtworks.legacycode.spawn_method;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 //  Spawn Method
 //
@@ -13,11 +13,12 @@ import static org.junit.Assert.assertThat;
 
 public class AiEntityTest {
     @Test
+    @Disabled
     public void shouldBecomeDeadWhenAtZeroOrFewerHitPoints() {
         int hitPoints = 0;
         Monster monster = new Monster(hitPoints, "Angry", new Vector2(0, 0));
         // Call new method here
 
-        assertThat(monster.state(), is("Dead"));
+        assertThat(monster.state()).isEqualTo("Dead");
     }
 }

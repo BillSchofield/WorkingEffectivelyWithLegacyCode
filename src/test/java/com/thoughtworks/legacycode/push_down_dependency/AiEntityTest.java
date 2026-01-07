@@ -1,6 +1,6 @@
 package com.thoughtworks.legacycode.push_down_dependency;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AiEntityTest {
 //  Push down Dependencies

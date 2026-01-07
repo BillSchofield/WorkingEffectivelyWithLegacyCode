@@ -1,6 +1,7 @@
 package com.thoughtworks.legacycode.pull_up_feature;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class AiEntityTest {
 

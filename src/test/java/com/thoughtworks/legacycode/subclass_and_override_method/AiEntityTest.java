@@ -1,10 +1,9 @@
 package com.thoughtworks.legacycode.subclass_and_override_method;
 
 import com.thoughtworks.legacycode.primitivize_parameter.Vector2;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AiEntityTest {
 
@@ -19,7 +18,7 @@ public class AiEntityTest {
         monster.nearestEnemy = new TestMonster(10, "", new Vector2(1,1));
         monster.processAi();
 
-        assertThat(monster.enemyWeMovedTo, is(monster.nearestEnemy));
+        assertThat(monster.enemyWeMovedTo).isEqualTo(monster.nearestEnemy);
     }
 
 }

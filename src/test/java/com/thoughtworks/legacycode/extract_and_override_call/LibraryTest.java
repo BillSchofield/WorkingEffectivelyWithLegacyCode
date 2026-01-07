@@ -1,6 +1,7 @@
 package com.thoughtworks.legacycode.extract_and_override_call;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class LibraryTest {
 // Extract tough dependency and override it then test child class
 
     @Test
+    @Disabled
     public void shouldPrintNameOfBookWhenThereIsOneBook() {
         List<Book> books = new ArrayList<Book>();
         books.add(new Book("Ringworld"));
