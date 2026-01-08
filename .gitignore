@@ -1,3 +1,7 @@
 .idea/
 *.class
 .gradle/
+/build/tmp/*
+/build/test-results/*
+/build/reports/*
+/build/pitClasspath
