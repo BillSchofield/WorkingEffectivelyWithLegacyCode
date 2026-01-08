@@ -20,7 +20,7 @@ public class LibraryTest {
     @Test
     public void shouldPrintTheBookNameWhenThereIsOneBook() throws IOException {
         PrintStream printStream = mock(PrintStream.class);
-        Library library = new Library(printStream);
+        LibraryBefore library = new LibraryBefore(printStream);
         List<Book> books = new ArrayList<Book>();
         books.add(new Book("House of Leaves"));
 
